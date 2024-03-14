@@ -4,10 +4,11 @@ import time
 
 from Adafruit_IO import MQTTClient
 from simple_ai import *
+from uart import *
 
 AIO_FEED_IDs = ["nutnhan1", "nutnhan2", "ai"]
 AIO_USERNAME = "huytran1305"
-AIO_KEY = "aio_cnvs67pBjKCILvRzIaJyshkrfMkM"
+AIO_KEY = "aio_ZZMj10mjOzlmPWVRJSX9qdZ95ehe"
 
 
 def connected(client):
@@ -36,18 +37,18 @@ client.on_message = message
 client.on_subscribe = subscribe
 client.connect()
 client.loop_background()
-counter = 5
+# counter = 5
 counter_ai = 5
 while True:
-    counter = counter - 1
-    if counter <= 0:
-        counter = 5
-        temp = random.randint(10, 30)
-        client.publish("cambien1", temp)
-        light = random.randint(10, 100)
-        client.publish("cambien2", light)
-        humidity = random.randint(10, 100)
-        client.publish("cambien3", humidity)
+    # counter = counter - 1
+    # if counter <= 0:
+    #     counter = 5
+    #     temp = random.randint(10, 30)
+    #     client.publish("cambien1", temp)
+    #     light = random.randint(10, 100)
+    #     client.publish("cambien2", light)
+    #     humidity = random.randint(10, 100)
+    #     client.publish("cambien3", humidity)
 
     counter_ai = counter_ai - 1
 
@@ -57,6 +58,8 @@ while True:
         # print("AI: ", ai_result)
         client.publish("ai", ai_result)
 
-    time.sleep(2)
+    readSerial(client)
+
+    time.sleep(1)
 
     pass
