@@ -138,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710411640138</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="finish lab 3&amp;4">
+      <option name="closed" value="true" />
+      <created>1712207061888</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1712207061888</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
