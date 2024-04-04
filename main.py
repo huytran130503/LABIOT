@@ -8,7 +8,7 @@ from uart import *
 
 AIO_FEED_IDs = ["nutnhan1", "nutnhan2", "ai"]
 AIO_USERNAME = "huytran1305"
-AIO_KEY = "aio_guoh36Z6iHYoQ06m3TcLosuAPP1c"
+AIO_KEY = ""
 
 
 def connected(client):
